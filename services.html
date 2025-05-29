@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1107px;
+        max-height: 181px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .left-heading {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 90px;
+        letter-spacing: -0.02em;
+        text-transform: capitalize;
+        max-width: 606px;
+        min-height: 180px;
+        background: linear-gradient(90deg, #baffff 0%, #779494 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .left-small {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0;
+        max-width: 105px;
+        min-height: 20px;
+        color: #f9ffff;
+      }
+      .left-content {
+        position: relative;
+        z-index: 1;
+      }
+      .left-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-70px);
+        width: 608px;
+        height: 372px;
+        opacity: 0.1;
+        border-radius: 269px;
+        background-image: url("images/before.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+        background: #00ced1;
+        filter: blur(80px);
+      }
+
+      .right-content {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        padding: 20px;
+        border-radius: 20px;
+
+        max-width: 500px; /* Added for proper alignment */
+        width: 100%;
+      }
+
+      .right-heading {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 33px;
+        letter-spacing: 0;
+        text-transform: capitalize;
+        max-width: 497px;
+        min-height: 99px;
+        opacity: 0.8;
+        color: #e0ffff;
+      }
+      .right-btn {
+        background-color: #00ffff;
+        max-height: 48px;
+        max-width: 206px;
+        color: #000;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 30px;
+
+        transition: all 0.3s ease;
+      }
+
+      .right-btn:hover {
+        background-color: #00e6e6;
+        box-shadow: 0 8px 32px rgba(0, 255, 255, 0.3);
+      }
+
+      .card-box {
+        background: linear-gradient(
+          164.95deg,
+          rgba(43, 255, 255, 0.1),
+          rgba(43, 255, 255, 0.02),
+          rgba(43, 255, 255, 0.06)
+        );
+        border-radius: 24px;
+        padding: 20px;
+        max-width: 500px;
+        width: 100%;
+      }
+      .inner-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 40px;
+        justify-content: center; /* center the grid in container */
+        padding: 40px;
+        max-width: 1200px;
+        margin: 60px auto; /* center on page */
+
+        border-radius: 32px;
+      }
+
+      .card-box h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        background: linear-gradient(90deg, #baffff 0%, #779494 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 16px;
+      }
+
+      .badge-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      .badge-tech {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #e0ffff;
+        max-width: 138px;
+        min-height: 28px;
+        padding: 10px 12px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+
+        gap: 10px;
+        border-radius: 34px;
+        border: 1px solid #ccc; /* or use your preferred color */
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 500;
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 496px;
+        height: auto;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .image-container > img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+        object-fit: cover;
+        aspect-ratio: 496 / 377;
+        clip-path: polygon(
+          54% 8%,
+          54% 0,
+          100% 0,
+          100% 16%,
+          100% 100%,
+          0 100%,
+          0 78%,
+          0 8%,
+          27% 8%
+        );
+      }
+      .arrow-button img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        clip-path: none;
+      }
+
+      .arrow-button {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+
+        color: #000;
+        width: 57px;
+        height: 40px;
+
+        font-weight: bold;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Work  Section */
+      .inner-work {
+        position: relative; /* Necessary for absolute positioning of ::before */
+        width: 100%;
+        max-width: 1212px;
+        height: 342px;
+        padding-right: 40px;
+        padding-left: 40px;
+        gap: 40px;
+        border-radius: 32px;
+        background: linear-gradient(
+          164.95deg,
+          rgba(43, 255, 255, 0.1) 0%,
+          rgba(43, 255, 255, 0.02) 50%,
+          rgba(43, 255, 255, 0.06) 100%
+        );
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .inner-work::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 1212 / 404.45;
+        background: url("images/assest.png") no-repeat center center;
+        background-size: contain;
+        opacity: 0.4;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .word-detail {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .word-heading {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 90px;
+        letter-spacing: -2%;
+        text-align: center;
+        text-transform: capitalize;
+
+        background: linear-gradient(90deg, #baffff 0%, #779494 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        max-width: 956px;
+        max-height: 180px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .word-btn {
+        padding: 10px 12px;
+        gap: 10px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #00ced1 0%, #20b2aa 100%);
+        color: #fff;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        max-width: 180px;
+        max-height: 48px;
+      }
+
+
+     
+
+.inner-footer{
+  max-width: 1212px;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  padding: 0 20px;
+  gap: 40px; 
+}
+.left-footer {
+  max-width: 174px;         
+  min-height: 109px;       
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.left-footer-top {
+  max-width: 174px;      
+  min-height: 48px;      
+  display: flex;         
+  align-items: center;   
+  gap: 10px;           
+}
+.left-footer-top img {
+  max-width: 28px;        
+  max-height: 38px;       
+  margin-top: 5px;       
+  margin-left: 15px;       
+  object-fit: contain;     
+}
+.left-icons {
+  max-width: 157px;         
+  max-height: 32.5px;      
+  margin-top: 8px;         
+  padding-left: 6px;        
+  display: flex;
+  gap: 8px;                 
+         
+}
+.icon-images {
+  width: 33px;                         
+  height: 32.5px;                       
+  border-radius: 50%;                  
+  border: 0.54px solid #E0FFFF;        
+  padding: 9.3px 12px;              
+  color: #FFFFFF;           
+  object-fit: cover;                   
+}
+
+.footer-center {
+  display: flex;
+  gap: 94px;
+  max-width: 500px; 
+  min-height: 104px;
+
+  
+}
+
+
+.footer-center ul li a {
+  text-decoration: none;
+  color: #e0ffff;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+
+.footer-center ul {
+   list-style: none; 
+  max-width: 150px;      
+  min-height: 104px;      
+  display: flex;
+  flex-direction: column;
+  gap: 20px;             
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.right-footer {
+  max-width: 300px;        
+  min-height: 104px;            
+  display: flex;            
+  flex-direction: column;  
+  gap: 16px;                
+  padding: 10px;           
+  box-sizing: border-box;   
+}
+.right-footer ul {
+    list-style: none; 
+  max-width: 150px;      
+  min-height: 104px;      
+  display: flex;
+  flex-direction: column;
+  gap: 10px;             
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+.right-footer li {
+  display: flex;
+  align-items: center;
+  gap: 8px;                
+}
+.right-footer ul li a {
+  text-decoration: none;
+  color: #e0ffff;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.right-footer img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+
+    </style>
+  </head>
+
+  <body class="bg-dark text-white">
+    <section class="services d-flex align-items-center">
+      <div class="container">
+        <div class="inner">
+          <div class="left-content col">
+            <small class="left-small">Home/projects</small>
+            <h1 class="left-heading">
+              Ideas To<br />
+              Excellence
+            </h1>
+          </div>
+
+          <div class="right-content col">
+            <p class="right-heading">
+              Engineering High-Performance Digital Experiences. Creating Smart,
+              Seamless Solutions. Delivering Excellence in Every Project.
+            </p>
+            <button class="right-btn">Schedule a meeting</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Card">
+      <div class="container">
+        <div class="inner-card">
+          <!-- Card 1 -->
+          <div class="card-box">
+            <h3>Project Name</h3>
+            <div class="badge-container">
+              <span class="badge-tech">Web Development</span>
+              <span class="badge-tech">React</span>
+            </div>
+            <div class="image-container">
+              <img
+                class="project-image"
+                src="images/card1.png"
+                alt="Project Screenshot"
+              />
+
+              <a href="#" class="arrow-button">
+                <img src="images/A1.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card-box">
+            <h3>Project Name</h3>
+            <div class="badge-container">
+              <span class="badge-tech">Web Development</span>
+              <span class="badge-tech">React</span>
+            </div>
+            <div class="image-container">
+              <img src="images/a5.png" alt="Project Screenshot" />
+              <a href="#" class="arrow-button">
+                <img src="images/A1.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card-box">
+            <h3>Project Name</h3>
+            <div class="badge-container">
+              <span class="badge-tech">Web Development</span>
+              <span class="badge-tech">React</span>
+            </div>
+            <div class="image-container">
+              <img src="images/A2.png" alt="Project Screenshot" />
+              <a href="#" class="arrow-button">
+                <img src="images/A1.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card-box">
+            <h3>Project Name</h3>
+            <div class="badge-container">
+              <span class="badge-tech">Web Development</span>
+              <span class="badge-tech">React</span>
+            </div>
+            <div class="image-container">
+              <img src="images/A3.png" alt="Project Screenshot" />
+              <a href="#" class="arrow-button">
+                <img src="images/A1.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card-box">
+            <h3>Project Name</h3>
+            <div class="badge-container">
+              <span class="badge-tech">Web Development</span>
+              <span class="badge-tech">React</span>
+            </div>
+            <div class="image-container">
+              <img src="images/a4.png" alt="Project Screenshot" />
+              <a href="#" class="arrow-button">
+                <img src="images/A1.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card-box">
+            <h3>Project Name</h3>
+            <div class="badge-container">
+              <span class="badge-tech">Web Development</span>
+              <span class="badge-tech">React</span>
+            </div>
+            <div class="image-container">
+              <img src="images/a5.png" alt="Project Screenshot" />
+              <a href="#" class="arrow-button">
+                <img src="images/A1.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class=".work-section">
+      <div class="container">
+        <div class="inner-work">
+          <div class="word-detail">
+            <h3 class="word-heading">
+              Let’s work together on your next project
+            </h3>
+            <button class="word-btn">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="inner-footer">
+      <div class="left-footer">
+            <div class="left-footer-top">
+                     <img src="images/fimg.png" alt="" />
+                      <b>Code Prime</b>
+            </div>
+      
+        <div class="left-icons">
+          <img src="images/fb1.png" alt=""  class="icon-images"/>
+          <img src="images/Instagram (2).png" alt=""  class="icon-images" />
+          <img src="images/x3.png" alt=""   class="icon-images"/>
+          <img src="images/i5.png" alt=""    class="icon-images"/>
+        </div>
+      </div>
+     
+      
+        <div class="footer-center">
+          <ul>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+     
+      <div class="right-footer">
+              <ul>
+            <li><a href="#"><img src="images/Map_Pin.png" alt=""></a> Bahria Town,Islamabad</li>
+            <li><a href="#"> <img src="images/Phone.png" alt=""></a> +1  (786)  348-7052</li>
+            <li><a href="#"><img src="images/Mail.png" alt=""></a>info@primecode.ai</li>
+          </ul>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
