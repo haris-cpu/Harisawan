@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="services.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+
+    <style>
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 20px; 
+  position: relative;
+flex-wrap: wrap;
+}
+
+ .services-detailimg {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  gap: 26.89px;
+  max-width: 100%;
+}
+.services-detailtext {
+  position: relative;
+  left: 10px;
+ 
+  display: block;
+  max-width: 203px;
+  max-height: 20px;
+  overflow: hidden;
+}
+
+.services-detailtext p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  
+}
+.project-card{
+   position: absolute;
+   top: 570px;
+   left: 30px;
+  border-radius: 32px;
+  background: linear-gradient(
+    164.95deg,
+    rgba(43, 255, 255, 0.1) 0%,
+    rgba(43, 255, 255, 0.02) 50%,
+    rgba(43, 255, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(40px);
+
+  width: 80vw;      
+  height: 25vh;     
+  max-width: 1041px; 
+  min-height: 209px;
+ 
+}
+.project-title {
+  position: relative; 
+ max-width: 230px;      
+  min-height: 60px;       
+  top: 44px;        
+  left: 35px;         
+
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  letter-spacing: -0.02em; 
+  vertical-align: middle;
+  
+  background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 6px;
+  border-radius: 42px;
+  border: 1.23px solid #E0FFFF;
+  gap: 12.3px;
+  min-width: 5.7em;
+  min-height: 2em;
+  margin-top: 33px;
+  margin-left: 25px;
+ 
+}
+
+.project-date {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: #E0FFFF;
+  opacity: 0.8;
+  display: inline-block;
+  padding: 0.2rem 1.5rem;
+  min-width: 9rem;
+  min-height: 1.625rem;
+ 
+  margin-left: 0.1rem;
+  margin-top: 4px;
+  border-radius: 0.5rem;
+}
+
+.tag-text{
+    .your-class {
+  max-width: 100%;          /* Responsive width */
+  min-height: 174px;        /* Ensures enough height for content */
+  padding: 1rem;            /* Give breathing room */
+  
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  background: #E0FFFF;      /* Light cyan background */
+  box-sizing: border-box;   /* Includes padding in width/height */
+  word-wrap: break-word;    /* Prevents overflow */
+}
+}
+
+
+.text-g {
+  width: 100%;
+  min-height: 174px;
+  padding: 1.5rem;
+ font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E0FFFF;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-align: justify;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  white-space: normal;
+  position: relative;
+  top: 206px;
+}
+
+.inner-t {
+  display: flex;
+  flex-direction: column;  /* Stack children vertically */
+  align-items: center;
+  justify-content: center; /* or center if you want it centered vertically */
+  max-width: 1440px;
+  min-height: 758px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 100px 0;
+}
+
+
+
+
+.heading-a {
+  position: relative;
+  max-width: 90%;
+  margin: 100px auto 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+      .heading-a h2 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 60px;
+        letter-spacing: -0.02em;
+        background: linear-gradient(90deg, #baffff 0%, #779494 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+    .image-curve {
+  position: relative;
+  max-width: 100%;
+  min-height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+ 
+}
+
+      .image-curve img.main-curve {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+      }
+
+      .small-icon {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        object-fit: cover;
+        border-radius: 50%;
+        z-index: 2;
+      }
+
+      /* Custom positions for each icon */
+     .icon1 { top: 9%; left: 15%; }   /* x1.png */
+.icon2 { top: 65%; left: 33%; }   /* x2.png */
+.icon3 { top: 27%; left: 51%; }   /* x4.png */
+.icon4 { top: 87%; right: 32%; }  /* x5.png */
+.icon5 { top: 1%; right: 15%; }
+
+
+
+
+
+.content-div {
+  position: absolute;
+  top: 137px;
+  left: 195px;
+  max-width: 183px;
+  max-height: 78px;
+  padding: 10px 15px;
+  border-radius: 21px;
+  background: linear-gradient(
+    164.95deg,
+    rgba(43, 255, 255, 0.1) 0%,
+    rgba(43, 255, 255, 0.02) 50%,
+    rgba(43, 255, 255, 0.06) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-div h3 {
+  max-width: 182px;
+  max-height: 60px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0;
+}
+
+
+.box1 {
+  color: #FFD392;
+
+}
+
+.box2 {
+color: #FFAC92;
+
+}
+
+.box3 {
+ color: #92CEFF;
+
+}
+
+.box4 {
+ color: #92FFB0;
+
+}
+
+.box5 {
+ color: #00CED1;
+
+}
+
+.box1 { top: -990%; left: -75%; position: absolute; }   /* Above icon1 */
+.box2 { top: 97px; left: 500%; position: absolute; }  /* Above icon2 */
+.box3 { top: -790%; left: 1319%; position: absolute; }  /* Above icon3 */
+.box4 { top: 787%; left: 1805%; position: absolute; } /* Above icon4 */
+.box5 { top: -230px; left: 2515%; position: absolute; } /* Above icon5 */
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 80vw;
+    height: auto;
+    top: auto;
+    left: auto;
+    
+    padding: 1rem;
+    position: relative;
+    left: 20px;
+    bottom: 30px;
+
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
+
+  .tag {
+    margin-top: 1rem;
+    margin-left: 0;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .project-date {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    min-width: auto;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .services-detailimg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-detailimg img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+/* 📱 Media Queries for Small Devices */
+@media (max-width: 768px) {
+  .text-g {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 1rem;
+    top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-g {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0.8rem;
+    top: 60px;
+  }
+}
+
+
+
+
+/* Medium Devices (Tablets, 768px and down) */
+@media (max-width: 992px) {
+  .heading-a {
+    transform: translateX(0);
+    text-align: center;
+    justify-content: center;
+  }
+
+  .image-curve {
+    transform: translateX(0);
+    margin-top: 60px;
+  }
+
+  .content-div {
+    position: static;
+    margin: 10px auto;
+  }
+
+  .content-div h3 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .small-icon {
+    display: none; /* Hide icons for better mobile layout */
+  }
+
+  .box1, .box2, .box3, .box4, .box5 {
+    position: static;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+/* Small Devices (Phones, 576px and down) */
+@media (max-width: 768px) {
+  .heading-a h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .text-g {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 1rem;
+  }
+
+  .inner-t {
+    padding: 10px;
+  }
+
+  .content-div h3 {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+/* Extra Small Devices (under 576px) */
+@media (max-width: 576px) {
+  .image-curve img.main-curve {
+    width: 90%;
+  }
+
+  .heading-a {
+    padding: 0 10px;
+  }
+
+  .content-div {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .content-div h3 {
+    font-size: 14px;
+  }
+}
+
+
+    </style>
+  </head>
+
+  <body class="bg-dark text-white">
+
+    <nav>
+  <div class="container">
+    <div class="inner-navbar">
+      <div class="navbar">
+        
+        <div class="navbar-left">
+          <div class="navbar-logo">
+            <img src="images/fimg.png" alt="" />
+            <b class="nav-heading">Code Prime</b>
+          </div>
+        </div>
+        
+  <div class="navbar-center">
+  <div class="nav-list">
+    <ul class="nav-items">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Project</a></li>
+    </ul>
+  </div>
+
+  
+  <button class="toggle-btn" id="menu-toggle">
+    <i class="bi bi-list"></i> 
+  </button>
+</div>
+
+        
+        <div class="navbar-right">
+          <div class="search-icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <div class="request-btn">
+            <button class="styling-button">Request a Call</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+    <section class="services-detail">
+      <div class="container">
+        <div class="inner">
+          <div class="services-detailtext">
+            <p>Home/Project/Project Details</p>
+          </div>
+          <div class="services-detailimg">
+            <img src="images/servicesimgq.png" alt="img"  class="img-fluid"/>
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">
+              Project Name
+            </h3>
+           
+            <div class="tags">
+              <span class="tag">Saas</span>
+              <span class="tag">App Development</span>
+            </div>
+            <p class="project-date">November 4, 2024</p>
+          </div>
+          
+        </div>
+      
+      </div>
+    </section>
+
+
+<section  class="last">
+    <div class="container">
+        <div class="inner">
+            <div class="text-g">
+            <p>By integrating game mechanics such as challenges, achievements, and rewards into mobile apps, companies are enhancing user interaction and seeing a remarkable increase in customer loyalty and sales.   <br>
+                <br>
+                 
+Moreover, according to Business Wire, implementation of gamification will improve MTTR (mean time to respond) by up to 15%.  <br>
+<br>
+
+This blog explores how mobile game development can transform these engaging elements into substantial business growth, creating unforgettable experiences that drive brand loyalty and profitability.  <br> 
+<br>
+Discover the power of mobile games in today’s competitive business environment.</p>
+</div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="curve-section">
+      <div class="container-fluid">
+        <div class="inner-t">
+          <div class="heading-a">
+            <h2>Our Step-by-Step Project Process</h2>
+          </div>
+          <div class="image-curve">
+            <!-- Main curve image -->
+            <img src="images/Group 30.png" alt="Main Curve" class="main-curve img-fluid" />
+
+            <!-- Small icons positioned on top -->
+            <img src="images/x1.png" alt="Icon 1" class="small-icon icon1" />
+            <img src="images/x2.png" alt="Icon 2" class="small-icon icon2" />
+            <img src="images/x4.png" alt="Icon 3" class="small-icon icon3" />
+            <img src="images/x5.png" alt="Icon 4" class="small-icon icon4" />
+            <img src="images/x6.png" alt="Icon 5" class="small-icon icon5" />
+            <div class="content-div">
+          <div class="content-div box1">
+  <h3>Discovery</h3>
+</div>
+<div class="content-div box2">
+  <h3>Planning</h3>
+</div>
+<div class="content-div box3">
+  <h3>Design</h3>
+</div>
+<div class="content-div box4">
+  <h3>Development</h3>
+</div>
+<div class="content-div box5">
+  <h3>Launch</h3>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navList = document.querySelector(".nav-list");
+
+  toggleBtn.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
